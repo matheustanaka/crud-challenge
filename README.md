@@ -1,18 +1,12 @@
 # CRUD CHALLENGE
 
----
-
 Building a REST API using express.
 
 ## About the Challenge
 
----
-
 You should make a backend implementation using express.
 
 ## Getting started
-
----
 
         # clone repo
         $ git clone https://github.com/matheustanaka/crud-challenge.git
@@ -29,8 +23,6 @@ You should make a backend implementation using express.
 
 ## About the API
 
----
-
 ### Api
 
 -   [ ] GET User
@@ -45,7 +37,5 @@ You should make a backend implementation using express.
 -   [ ] create user model
 
 ## Follow me
-
----
 
 If you want to talk with me, please send me a message on [Twitter](https://twitter.com/matheus__tanaka).
