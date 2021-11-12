@@ -34,7 +34,7 @@ You should make a backend implementation using express.
 ### Mongodb
 
 -   [x] create connection with mongodb
--   [ ] create user model
+-   [x] create user model
 
 ## Follow me
 
