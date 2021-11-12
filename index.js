@@ -7,7 +7,7 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 connectToDatabase();
-
+//Getting all users
 app.get("/users", async (req, res) => {
     try {
         const users = await UserModel.find({});
@@ -17,6 +17,7 @@ app.get("/users", async (req, res) => {
     }
 });
 
+//Creating an user
 app.post("/users", async (req, res) => {
     try {
         const newUser = new UserModel(req.body);
@@ -25,6 +26,21 @@ app.post("/users", async (req, res) => {
         res.status(201).json(newUser);
     } catch (error) {
         res.status(500).json({ error: "You can't create an User" });
+    }
+});
+
+//Getting an unique User by ID
+app.get("/users/:id", async (req, res) => {
+    try {
+        const userId = req.params.id;
+        const user = await UserModel.findById(userId);
+        if (!user) {
+            return res.status(404).json({ error: "Not Found User ID" });
+        }
+
+        return res.status(200).json(user);
+    } catch (error) {
+        return res.status(500).json({ error: "Not Found User ID" });
     }
 });
 
