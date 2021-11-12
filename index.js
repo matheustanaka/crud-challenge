@@ -44,4 +44,38 @@ app.get("/users/:id", async (req, res) => {
     }
 });
 
+//Updating user by ID, here you can update name, email and password
+app.put("/users/:id", async (req, res) => {
+    try {
+        const userId = req.params.id;
+        const userData = req.body;
+
+        const userToUpdate = await UserModel.findById(userId);
+
+        if (!userToUpdate) {
+            return res.status(500).json({ error: "Not Found User" });
+        }
+
+        const allowedToUpdate = ["name", "email", "password"];
+        const requestedToUpdate = Object.keys(req.body);
+
+        for (const update of requestedToUpdate) {
+            if (allowedToUpdate.includes(update)) {
+                userToUpdate[update] = userData[update];
+            } else {
+                return res
+                    .status(500)
+                    .json({ error: "You can't update your user information" });
+            }
+        }
+
+        await userToUpdate.save();
+        return res.status(200).json(userToUpdate);
+    } catch (error) {
+        res.status(500).json({
+            error: "You can't update your user information",
+        });
+    }
+});
+
 app.listen(3333, () => console.log("Listening on port 3333"));
