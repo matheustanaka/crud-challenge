@@ -33,7 +33,7 @@ You should make a backend implementation using express.
 
 ### Mongodb
 
--   [ ] create connection with mongodb
+-   [x] create connection with mongodb
 -   [ ] create user model
 
 ## Follow me
