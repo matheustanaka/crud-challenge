@@ -10,10 +10,16 @@ connectToDatabase();
 //Getting all users
 app.get("/users", async (req, res) => {
     try {
+        //Waiting the const users find UserModel(name,email,senha)
         const users = await UserModel.find({});
+        if (!users) {
+            //If users are not found, return a status 404: The server can not find the requested resource
+            return res.status(404).json({ error: "Not Found Users" });
+        }
+        //If users exists should return a status 200: The request succeeded
         res.status(200).json(users);
     } catch (error) {
-        res.status(500).json({ error: "Not Found Users" });
+        return res.status(404).json({ error: "Not Found Users" });
     }
 });
 
@@ -25,7 +31,7 @@ app.post("/users", async (req, res) => {
 
         res.status(201).json(newUser);
     } catch (error) {
-        res.status(500).json({ error: "You can't create an User" });
+        return res.status(500).json({ error: "You can't create an User" });
     }
 });
 
