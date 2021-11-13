@@ -11,21 +11,6 @@ connectToDatabase();
 
 app.use("/users", UserRouter);
 
-//Creating an user
-app.post("/users", async (req, res) => {
-    try {
-        //Adding a new User, so here will receive a new UserModel(name,email,passoword)
-        const newUser = new UserModel(req.body); //req.body means that you will add some data inside your model
-        //Here you should wait, after, the newUser will be saved in database
-        await newUser.save();
-        //send a 201 status: The request succeeded, new User was created.
-        res.status(201).json(newUser);
-    } catch (error) {
-        //send a 500 status: The server has encountered a situation it does not know how to handle.
-        return res.status(500).json({ error: "Internal server error" });
-    }
-});
-
 //Getting an unique User by ID
 app.get("/users/:id", async (req, res) => {
     try {

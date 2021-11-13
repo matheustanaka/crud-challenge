@@ -5,5 +5,9 @@ const router = express.Router();
 router.get("/", async (req, res) => {
     return new UserController(req, res).getAll();
 });
+//Creating an user
+router.post("/users", async (req, res) => {
+    return new UserController(req, res).getByID();
+});
 
 module.exports = router;
