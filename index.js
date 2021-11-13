@@ -11,25 +11,6 @@ connectToDatabase();
 
 app.use("/users", UserRouter);
 
-//Getting an unique User by ID
-app.get("/users/:id", async (req, res) => {
-    try {
-        //Requesting an id as paramater
-        const userId = req.params.id;
-        //Waiting const user find the User ID inside our Model
-        const user = await UserModel.findById(userId);
-        //If not found user Id return a 404 status: The server can not find the requested resource
-        if (!user) {
-            return res.status(404).json({ error: "Not Found User ID" });
-        }
-        //return a 200 status: The requested succeeded
-        return res.status(200).json(user);
-    } catch (error) {
-        //send a 500 status: The server has encountered a situation it does not know how to handle.
-        return res.status(500).json({ error: "Internal server error" });
-    }
-});
-
 //Updating user by ID, here you can update name, email and password
 app.put("/users/:id", async (req, res) => {
     try {
