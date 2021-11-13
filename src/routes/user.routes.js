@@ -14,8 +14,11 @@ router.post("/", async (req, res) => {
     return new UserController(req, res).create();
 });
 //Updating user by ID, here you can update name, email and password
-router.put("/users/:id", async (req, res) => {
+router.put("/:id", async (req, res) => {
     return new UserController(req, res).update();
 });
-
+//Updating user name
+router.patch("/:id", async (req, res) => {
+    return new UserController(req, res).updateName();
+});
 module.exports = router;
