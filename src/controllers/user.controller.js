@@ -29,7 +29,7 @@ class UserController {
     //Getting an unique user by ID
     async getByID() {
         try {
-            //Requesting an id as paramater
+            //Requesting an id as a paramater
             const userId = this.req.params.id;
             //Waiting const user find the User ID inside our Model
             const user = await UserModel.findById(userId);
