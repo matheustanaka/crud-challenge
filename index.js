@@ -2,29 +2,14 @@ const express = require("express");
 const dotenv = require("dotenv");
 const connectToDatabase = require("./src/database/mongoose.db");
 const UserModel = require("./src/models/user.model");
+const UserRouter = require("./src/routes/user.routes");
 
 dotenv.config();
 const app = express();
 app.use(express.json());
 connectToDatabase();
-//Getting all users
-app.get("/users", async (req, res) => {
-    try {
-        //Waiting the const users find UserModel(name,email,senha)
-        const users = await UserModel.find({});
-        //Verifying if users exists
-        if (!users) {
-            //An example of verification errors
-            //If users are not found, return a status 404: The server can not find the requested resource
-            return res.status(404).json({ error: "Not Found Users" });
-        }
-        //If users exists should return a status 200: The request succeeded
-        return res.status(200).json(users);
-    } catch (error) {
-        //Return a generic error
-        return res.status(500).json({ error: "Internal server error" });
-    }
-});
+
+app.use("/users", UserRouter);
 
 //Creating an user
 app.post("/users", async (req, res) => {
