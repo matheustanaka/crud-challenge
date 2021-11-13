@@ -5,9 +5,10 @@ const router = express.Router();
 router.get("/", async (req, res) => {
     return new UserController(req, res).getAll();
 });
+
 //Creating an user
 router.post("/users", async (req, res) => {
-    return new UserController(req, res).getByID();
+    return new UserController(req, res).create();
 });
 
 module.exports = router;

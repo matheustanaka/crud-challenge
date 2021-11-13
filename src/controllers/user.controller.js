@@ -26,8 +26,8 @@ class UserController {
                 .json({ error: "Internal server error" });
         }
     }
-    //Getting a unique user by Id
-    async getByID() {
+    //Create User
+    async create() {
         try {
             //Adding a new User, so here will receive a new UserModel(name,email,passoword)
             const newUser = new UserModel(req.body); //req.body means that you will add some data inside your model
