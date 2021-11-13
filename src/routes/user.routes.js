@@ -21,4 +21,9 @@ router.put("/:id", async (req, res) => {
 router.patch("/:id", async (req, res) => {
     return new UserController(req, res).updateName();
 });
+//Deleting user by ID
+router.delete("/:id", async (req, res) => {
+    return new UserController(req, res).delete();
+});
+
 module.exports = router;
