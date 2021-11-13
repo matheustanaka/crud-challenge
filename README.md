@@ -25,11 +25,11 @@ You should make a backend implementation using express.
 
 ### Api
 
--   [ ] GET User
--   [ ] POST User
--   [ ] PUT User
--   [ ] PATCH User
--   [ ] DELETE User
+-   [x] GET User
+-   [x] POST User
+-   [x] PUT User
+-   [x] PATCH User
+-   [x] DELETE User
 
 ### Mongodb
 
