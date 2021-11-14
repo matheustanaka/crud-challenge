@@ -19,7 +19,7 @@ You should make a backend implementation using express.
         $ nodemon index.js
 
         # you can see the project on localhost
-        http://localhost:3333/user
+        http://localhost:3333/users
 
 ## About the API
 
