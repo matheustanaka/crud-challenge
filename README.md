@@ -13,17 +13,19 @@ You should make a backend implementation using express.
         $ cd crud-challenge
 
         # install dependencies
-        $ yarn install
+        $ yarn
 
         # start project
-        $ nodemon index.js
+        $ npm run start:dev
 
         # you can see the project on localhost
         http://localhost:3333/users
 
 ## About the API
 
-### Api User
+Create a Rest API with 2 models, first User Model and second Medicines Model. The API is basically a simple wallet where you can manage your medicines.
+
+### Api
 
 -   [x] GET User
 -   [x] POST User
@@ -31,19 +33,10 @@ You should make a backend implementation using express.
 -   [x] PATCH User
 -   [x] DELETE User
 
-### Api Medicine
-
--   [x] GET Medicine
--   [x] POST Medicine
--   [x] PUT Medicine
--   [x] PATCH Medicine
--   [x] DELETE Medicine
-
 ### Mongodb
 
 -   [x] create connection with mongodb
 -   [x] create user model
--   [x] create medicine model
 
 ## Follow me
 
