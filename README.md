@@ -23,7 +23,7 @@ You should make a backend implementation using express.
 
 ## About the API
 
-### Api
+### Api User
 
 -   [x] GET User
 -   [x] POST User
@@ -31,10 +31,19 @@ You should make a backend implementation using express.
 -   [x] PATCH User
 -   [x] DELETE User
 
+### Api Medicine
+
+-   [x] GET Medicine
+-   [x] POST Medicine
+-   [x] PUT Medicine
+-   [x] PATCH Medicine
+-   [x] DELETE Medicine
+
 ### Mongodb
 
 -   [x] create connection with mongodb
 -   [x] create user model
+-   [x] create medicine model
 
 ## Follow me
 
