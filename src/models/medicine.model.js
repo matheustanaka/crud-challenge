@@ -20,7 +20,11 @@ const MedicineSchema = Schema({
     brand: {
         type: String,
         required: true,
-    }
+    },
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+    },
 });
 
 const MedicineModel = model("Medicine", MedicineSchema);

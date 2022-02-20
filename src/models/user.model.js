@@ -13,6 +13,7 @@ const UserSchema = Schema({
         type: String,
         required: true,
     },
+    medicines: [{ type: mongoose.Schema.Types.ObjectId, ref: "Medicine" }],
 });
 
 const UserModel = model("User", UserSchema);
