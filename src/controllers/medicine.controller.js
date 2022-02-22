@@ -15,7 +15,9 @@ class MedicineController {
             if (!medicines) {
                 //An example of verification errors
                 //If medicines are not found, return a status 404: The server can not find the requested resource
-                return this.res.status(404).json({ error: "Not Found medicines" });
+                return this.res
+                    .status(404)
+                    .json({ error: "Not Found medicines" });
             }
             //If medicines exists should return a status 200: The request succeeded
             return this.res.status(200).json(medicines);
@@ -76,10 +78,18 @@ class MedicineController {
             //Verifying if was found the medicine ID
             if (!medicineToUpdate) {
                 //if verification is true, return 404 status: The server can not find the requested resource
-                return this.res.status(404).json({ error: "Not Found medicine" });
+                return this.res
+                    .status(404)
+                    .json({ error: "Not Found medicine" });
             }
             //allowed to update define the properties that should be changeable
-            const allowedToUpdate = ["name", "email", "password"];
+            const allowedToUpdate = [
+                "name",
+                "description",
+                "price",
+                "quantity",
+                "brand",
+            ];
             //The Object.keys() method returns an array of a given object's own enumerable property names, iterated in the same order that a normal loop would.
             const requestedToUpdate = Object.keys(this.req.body);
             //looping the udpate of requested to update
@@ -158,7 +168,9 @@ class MedicineController {
                     .json({ error: "Not Found medicine ID" });
             }
             //medicine deleted should wait the process of find an id and delete, passing medicine id as paramater
-            const medicineDeleted = await MedicineModel.findByIdAndDelete(medicineId);
+            const medicineDeleted = await MedicineModel.findByIdAndDelete(
+                medicineId
+            );
             //return a 200 status: The request was successfully
             return this.res.status(200).json(medicineDeleted);
         } catch (error) {
