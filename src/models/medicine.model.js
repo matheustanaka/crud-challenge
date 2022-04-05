@@ -21,10 +21,13 @@ const MedicineSchema = Schema({
         type: String,
         required: true,
     },
+<<<<<<< HEAD
     user: {
         type: Schema.Types.ObjectId,
         ref: "User",
     },
+=======
+>>>>>>> 0f28029 (docs: update README)
 });
 
 const MedicineModel = model("Medicine", MedicineSchema);

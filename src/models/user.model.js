@@ -13,6 +13,9 @@ const UserSchema = Schema({
         type: String,
         required: true,
     },
+    medicines: {
+        type: Schema.Types.ObjectId, ref: 'Medicine',
+    }
 });
 
 const UserModel = model("User", UserSchema);
