@@ -23,7 +23,8 @@ You should make a backend implementation using express.
 
 ## About the API
 
-Create a Rest API with 2 models, first User Model and second Medicines Model. The API is basically a simple wallet where you can manage your medicines.
+Create a Rest API with 2 models, first User Model and second Medicines Model. 
+The API is basically a simple wallet where you can manage your medicines.
 
 ### Api
 
@@ -37,6 +38,7 @@ Create a Rest API with 2 models, first User Model and second Medicines Model. Th
 
 -   [x] create connection with mongodb
 -   [x] create user model
+-   [x] create medicine model
 
 ## Follow me
 
