@@ -9,7 +9,7 @@ const UserSchema = Schema({
         type: String,
         required: true,
     },
-    password: {
+    sympotms: {
         type: String,
         required: true,
     },
