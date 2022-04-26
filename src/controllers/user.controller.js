@@ -79,7 +79,7 @@ class UserController {
                 return this.res.status(404).json({ error: "Not Found User" });
             }
             //allowed to update define the properties that should be changeable
-            const allowedToUpdate = ["name", "email", "password"];
+            const allowedToUpdate = ["name", "email", "sympotms"];
             //The Object.keys() method returns an array of a given object's own enumerable property names, iterated in the same order that a normal loop would.
             const requestedToUpdate = Object.keys(this.req.body);
             //looping the udpate of requested to update
@@ -123,7 +123,7 @@ class UserController {
             }
             //Defining whats allowed to update
             const nameToUdpate = ["name"];
-            //Object.keys return all properties (name,email,password)
+            //Object.keys return all properties (name,email,sympotms)
             const requestToUpdate = Object.keys(this.req.body);
             //looping udpate of every request to update
             for (const update of requestToUpdate) {
