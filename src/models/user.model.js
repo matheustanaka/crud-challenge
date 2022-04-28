@@ -9,7 +9,7 @@ const UserSchema = Schema({
         type: String,
         required: true,
     },
-    sympotms: {
+    symptoms: {
         type: String,
         required: true,
     },
