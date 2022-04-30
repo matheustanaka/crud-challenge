@@ -17,5 +17,7 @@ app.use("/users", UserRouter);
 //Defining our router as medicines
 app.use("/medicines", MedicineRouter);
 
+const port = process.env.PORT || 8000;
+
 //Localhost port
-app.listen(3333, () => console.log("Listening on port 3333"));
+app.listen(port, () => console.log(`Listening on port ${port}`));
