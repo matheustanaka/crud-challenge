@@ -18,7 +18,7 @@ You should make a backend implementation using express.
         $ npm run start:dev
 
         # you can see the project on localhost
-        http://localhost:3333/users
+        http://localhost:8000/users
 
 ## About the API
 
