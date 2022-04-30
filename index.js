@@ -20,4 +20,4 @@ app.use("/medicines", MedicineRouter);
 const serverPort = process.env.PORT || 8000;
 
 //Localhost port
-app.listen(serverPort, () => console.log(`Listening on port ${port}`));
+app.listen(serverPort, () => console.log(`Listening on port ${serverPort}`));
