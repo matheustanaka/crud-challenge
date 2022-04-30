@@ -10,7 +10,6 @@ You should make a backend implementation using express.
 
         # clone repo
         $ git clone https://github.com/matheustanaka/crud-challenge.git
-        $ cd crud-challenge
 
         # install dependencies
         $ yarn
