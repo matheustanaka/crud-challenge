@@ -21,3 +21,5 @@ const port = process.env.PORT || 8000;
 
 //Localhost port
 app.listen(port, () => console.log(`Listening on port ${port}`));
+
+module.exports = app;
