@@ -8,8 +8,24 @@
     ],
     "routes": [
       {
-        "src": "/(.*)",
-        "dest": "index.js"
+        "src": "/users",
+        "dest": "/index.js",
+        "methods": ["GET"]
+      },
+      {
+        "src": "/users",
+        "dest": "/index.js",
+        "methods": ["POST"]
+      },
+      {
+        "src": "/users",
+        "dest": "/index.js",
+        "methods": ["PUT"]
+      },
+      {
+        "src": "/users",
+        "dest": "/index.js",
+        "methods": ["DELETE"]
       }
     ]
   }
