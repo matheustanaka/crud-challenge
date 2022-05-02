@@ -9,7 +9,7 @@
     "routes": [
       {
         "src": "/users",
-        "dest": "./src/routes/user.routes.js",
+        "dest": "/index.js",
         "methods": ["GET"]
       },
       {
