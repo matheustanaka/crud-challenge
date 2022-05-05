@@ -1,6 +1,7 @@
 # CRUD CHALLENGE
 
 Building a REST API using express.
+Check the API content: https://crud-challenge-symptoms.herokuapp.com/users
 
 ## About the Challenge
 
