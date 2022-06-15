@@ -14,7 +14,7 @@ You should make a backend implementation using express.
         $ git clone https://github.com/matheustanaka/crud-challenge.git
 
         # install dependencies
-        $ yarn
+        $ npm install
 
         # start project
         $ npm run start:dev
