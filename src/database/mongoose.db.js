@@ -1,9 +1,13 @@
 const mongoose = require("mongoose");
 
 const connectToDatabase = async () => {
+    const uri = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster1.rcxqisi.mongodb.net/?retryWrites=true&w=majority`;
+
     await mongoose.set("strictQuery", false);
-    await mongoose.connect(
-        `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.cmvjg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
+
+    // console.log("mongo URL: ", uri)
+
+    await mongoose.connect(uri,
         (error) => {
             if (error) {
                 return console.log(
